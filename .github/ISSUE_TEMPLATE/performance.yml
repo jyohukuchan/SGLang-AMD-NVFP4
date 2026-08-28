@@ -2,7 +2,8 @@ name: Performance result
 description: Submit a reproducible operator or end-to-end measurement
 title: "[Performance] "
 labels:
-  - enhancement
+  - performance
+  - needs-reproduction
 body:
   - type: markdown
     attributes:

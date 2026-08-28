@@ -2,7 +2,8 @@ name: Compatibility report
 description: Report an NVFP4 model success or failure on AMD hardware
 title: "[Compatibility] "
 labels:
-  - enhancement
+  - compatibility
+  - needs-reproduction
 body:
   - type: markdown
     attributes:
