@@ -1,0 +1,31 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Local experiment state and heavyweight artifacts
+.local-work/
+artifacts/
+hf-cache/
+models/
+profiles/
+torch_extensions/
+triton-cache/
+
+# Model weights and compiled GPU artifacts
+*.bin
+*.gguf
+*.hsaco
+*.onnx
+*.o
+*.pt
+*.pth
+*.safetensors
+*.so
+
+# Raw profiler and runtime output
+*.log
+*.nsys-rep
+*.sqlite
+

@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: SGLang questions and bugs
+    url: https://github.com/sgl-project/sglang/issues
+    about: Use upstream for general SGLang issues unrelated to this AMD NVFP4 project.
+

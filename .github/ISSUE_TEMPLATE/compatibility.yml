@@ -1,0 +1,70 @@
+name: Compatibility report
+description: Report an NVFP4 model success or failure on AMD hardware
+title: "[Compatibility] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, private prompts, model weights, or raw environment dumps.
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU and architecture
+      description: Include the product name and exact architecture, such as gfx1201 or gfx942.
+    validations:
+      required: true
+  - type: input
+    id: sglang
+    attributes:
+      label: SGLang revision
+      description: Commit SHA plus the patch, branch, or pull request used.
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and immutable revision
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: ROCm, PyTorch, container digest, and relevant package versions.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Highest evidence level reached
+      options:
+        - Host checks only
+        - Target compilation
+        - Numerical kernel execution
+        - Model load
+        - Model generation
+        - Quality and performance validation
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Reproduction command
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: dispatch
+    attributes:
+      label: Dispatch and numerical evidence
+      description: Explain how the intended kernel path and numerical result were confirmed.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and first relevant error
+    validations:
+      required: true

@@ -1,0 +1,50 @@
+name: Performance result
+description: Submit a reproducible operator or end-to-end measurement
+title: "[Performance] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Correctness must be established before performance is interpreted. Follow docs/benchmarking.md.
+  - type: input
+    id: tuple
+    attributes:
+      label: Hardware, code, and model tuple
+      description: GPU/architecture, SGLang SHA and patch, model name and immutable revision.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Container digest, ROCm, PyTorch, and relevant dependency versions.
+    validations:
+      required: true
+  - type: textarea
+    id: correctness
+    attributes:
+      label: Correctness evidence
+      description: Numerical oracle, dispatch proof, and model-level check.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and exact commands
+      description: Shapes or token counts, warmup, samples, graph mode, cache state, and concurrency.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Baseline and candidate results
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations
+    validations:
+      required: true
