@@ -23,6 +23,17 @@ The Qwen3.8 prototype keeps packed NVFP4 weights but currently executes its
 NVFP4 MLP linears as W4A16. It is not native W4A4 acceleration. See the
 [support matrix](docs/support-matrix.md) for exact boundaries and terminology.
 
+## Work tracking
+
+- [#1](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/1): upstream
+  RDNA4 dense W4A16 foundation.
+- [#2](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/2): Qwen3.8 27B
+  mixed NVFP4/FP8 compatibility.
+- [#3](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/3): RDNA4 decode,
+  prefill, and FP8 optimization patches.
+- [#4](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/4): reproducible
+  MI300/CDNA3 validation tuple.
+
 ## Project layout
 
 - [ROADMAP.md](ROADMAP.md) describes the intended upstream patch sequence.
@@ -55,4 +66,3 @@ Do not upload model weights, caches, compiled binaries, or raw profiles.
 
 This repository is licensed under the [Apache License 2.0](LICENSE).
 SGLang and third-party model checkpoints retain their own licenses.
-

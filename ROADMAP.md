@@ -14,7 +14,8 @@ keeping changes small enough to review and upstream independently.
 - Preserve the existing CUDA and CDNA/Petit paths.
 
 Status: implemented and locally validated; SGLang
-[PR #36788](https://github.com/sgl-project/sglang/pull/36788) is open.
+[PR #36788](https://github.com/sgl-project/sglang/pull/36788) is open. Project
+tracking: [issue #1](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/1).
 
 ### 2. Qwen3.8 mixed-format compatibility on RDNA4
 
@@ -27,6 +28,8 @@ Status: implemented and locally validated; SGLang
   not native W4A4 execution.
 
 Status: local prototype validated; publication is pending a clean patch split.
+Project tracking:
+[issue #2](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/2).
 
 ### 3. RDNA4 performance patches
 
@@ -35,7 +38,8 @@ Status: local prototype validated; publication is pending a clean patch split.
 - Land FP8 decode tuning only for measured, cached configurations.
 - Require correctness and end-to-end model evidence for each optimization.
 
-Status: local candidates validated; patches are not yet published.
+Status: local candidates validated; patches are not yet published. Project
+tracking: [issue #3](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/3).
 
 ### 4. CDNA3/MI300 validation
 
@@ -44,7 +48,8 @@ Status: local candidates validated; patches are not yet published.
 - Test decode, prefill, model load, generation, and resident weight memory.
 - Identify model-level failures separately from Petit/kernel failures.
 
-Status: planned. No MI300 execution result is currently claimed.
+Status: planned. No MI300 execution result is currently claimed. Project
+tracking: [issue #4](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/4).
 
 ### 5. Broader model and execution coverage
 
@@ -59,4 +64,3 @@ Each upstream pull request should have one primary purpose, a small regression
 surface, and target-specific evidence. Model compatibility, kernel
 optimization, new architecture support, and broad refactoring should not be
 combined merely because they involve NVFP4.
-

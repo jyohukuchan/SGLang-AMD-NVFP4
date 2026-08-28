@@ -24,7 +24,7 @@ or an unintended fallback never counts as target-device validation.
 | --- | --- | --- | --- | --- | --- |
 | Radeon AI PRO R9700 | `gfx1201` | `nvidia/Llama-3.1-8B-Instruct-NVFP4` at `bdb54e24298451af785c0ac63c1b485e9b7400a2` | Dense W4A16, BF16/FP16 activation, single GPU, decode and prefill | Upstream PR | Locally validated on the real target; [SGLang PR #36788](https://github.com/sgl-project/sglang/pull/36788) is open |
 | Radeon AI PRO R9700 | `gfx1201` | `unsloth/Qwen3.8-27B-NVFP4` local tree at `9e3d73c76edd` | Mixed compressed-tensors NVFP4/FP8, single GPU | Prototype | Packed NVFP4 MLP weights execute as W4A16; this is not native W4A4 |
-| MI300-class GPU | `gfx942` | ModelOpt/Petit NVFP4 | Dense execution through Petit | Planned | The expected CDNA3 path has not yet been validated by this project |
+| MI300-class GPU | `gfx942` | ModelOpt/Petit NVFP4 | Dense execution through Petit | Planned | The expected CDNA3 path has not yet been validated by this project; track [issue #4](https://github.com/jyohukuchan/SGLang-AMD-NVFP4/issues/4) |
 | Radeon AI PRO R9700 | `gfx1201` | NVFP4 MoE or tensor-parallel checkpoints | MoE, TP, or EP | Planned | Outside the current single-GPU dense proof |
 
 ## Known boundaries
@@ -39,4 +39,3 @@ or an unintended fallback never counts as target-device validation.
   wave32/WMMA results do not establish MI300 performance or correctness.
 - Multi-GPU, MoE, online conversion, FP4 KV cache, and generic fallback are not
   supported by the current proof.
-
